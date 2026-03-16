@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+.Python
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Type checkers
+.mypy_cache/
+.ruff_cache/
+
+# Environment files
+.env
+*.local
+
+# Uploads directory (runtime data)
+uploads/
+
+# Logs
+logs/
+*.log
+
+# ML models (large binaries)
+ml_models/
+
+# IDE
+.vscode/
+.idea/

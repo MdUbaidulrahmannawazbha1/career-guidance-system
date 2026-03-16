@@ -69,6 +69,9 @@ class Settings(BaseSettings):
     GOOGLE_REDIRECT_URI: str = "http://localhost:8000/api/v1/auth/google/callback"
 
     # ------------------------------------------------------------------
+    # Encryption (Fernet: AES-128-CBC + HMAC-SHA256)
+    # ENCRYPTION_KEY must be a 32-byte hex-encoded string (64 hex chars).
+    # The raw bytes are base64url-encoded to form the Fernet key.
     # Encryption (AES-256)
     # ENCRYPTION_KEY must be a 32-byte hex-encoded string (64 hex chars).
     # ENCRYPTION_IV  must be a 16-byte hex-encoded string (32 hex chars).
@@ -84,6 +87,7 @@ class Settings(BaseSettings):
         except binascii.Error as exc:
             raise ValueError("ENCRYPTION_KEY must be a valid 64-character hex string (32 bytes)") from exc
         if len(decoded) != 32:
+            raise ValueError("ENCRYPTION_KEY must decode to exactly 32 bytes for Fernet encryption")
             raise ValueError("ENCRYPTION_KEY must decode to exactly 32 bytes for AES-256")
         return v
 

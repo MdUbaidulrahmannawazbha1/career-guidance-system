@@ -35,6 +35,8 @@ engine: AsyncEngine = create_async_engine(
     echo=settings.DEBUG,
     pool_size=settings.DATABASE_POOL_SIZE,
     max_overflow=settings.DATABASE_MAX_OVERFLOW,
+    pool_pre_ping=True,
+    pool_recycle=1800,
     pool_pre_ping=True,         # verify connections before use
     pool_recycle=1800,          # recycle connections every 30 minutes
     future=True,
@@ -101,6 +103,7 @@ async def init_db() -> None:
     """
     Create all tables defined in ORM models.
 
+    In production, Alembic migrations should be used instead.
     In production, Alembic migrations should be used instead.  This helper
     is primarily useful during development and testing.
     """
@@ -119,6 +122,7 @@ async def close_db() -> None:
 
 
 async def check_db_connection() -> bool:
+    """Return *True* if the database is reachable, *False* otherwise."""
     """
     Return *True* if the database is reachable, *False* otherwise.
 
