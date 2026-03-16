@@ -29,7 +29,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.database import get_db
 from app.models.admin import AuditLog, CareerSkillsMap, QuestionBank
-from app.models.assessment import CareerAssessment, KnowledgeAssessment
+from app.models.assessment import CareerAssessment
 from app.models.prediction import CareerPrediction, PlacementPrediction
 from app.models.profile import MentorProfile
 from app.models.user import User, UserRole
@@ -40,7 +40,6 @@ from app.schemas.admin import (
     UserRoleUpdate,
     UserStatusUpdate,
 )
-from app.utils.jwt_handler import get_current_user
 from app.utils.rbac import require_role
 from app.utils.response import success_response
 

@@ -14,7 +14,7 @@ from app.database import get_db
 from app.middleware.rate_limiter import limiter
 from app.models.analysis import Resume, SkillGapAnalysis
 from app.models.user import User
-from app.schemas.analysis import ResumeAnalysisResponse, SkillGapRequest, SkillGapResponse
+from app.schemas.analysis import SkillGapRequest
 from app.utils.file_handler import save_upload, validate_pdf
 from app.utils.jwt_handler import get_current_user
 from app.utils.response import success_response

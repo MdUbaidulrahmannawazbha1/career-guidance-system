@@ -1,32 +1,3 @@
-import enum
-import uuid
-
-from sqlalchemy import (
-    Boolean,
-    Column,
-    DateTime,
-    Enum,
-    Index,
-    String,
-    func,
-)
-from sqlalchemy.dialects.postgresql import UUID
-from sqlalchemy.orm import relationship
-from sqlalchemy_utils import EncryptedType
-from sqlalchemy_utils.types.encrypted.encrypted_type import AesEngine
-
-from app.models.base import Base
-
-# The encryption key is read from the environment at import time.
-# Set SECRET_KEY in the environment before starting the application.
-import os
-
-_SECRET_KEY = os.getenv("SECRET_KEY")
-if not _SECRET_KEY:
-    raise RuntimeError(
-        "SECRET_KEY environment variable is not set. "
-        "Set a strong random value before starting the application."
-    )
 """
 User ORM model.
 
@@ -61,15 +32,6 @@ class User(Base):
         primary_key=True,
         default=uuid.uuid4,
         nullable=False,
-    )
-    email = Column(
-        EncryptedType(String, _SECRET_KEY, AesEngine, "pkcs5"),
-        nullable=False,
-    )
-    hashed_password = Column(String, nullable=False)
-    full_name = Column(
-        EncryptedType(String, _SECRET_KEY, AesEngine, "pkcs5"),
-        nullable=True,
     )
     email = Column(String(255), nullable=False, unique=True, index=True)
     hashed_password = Column(String(255), nullable=False)
@@ -143,9 +105,6 @@ class User(Base):
     )
     created_questions = relationship(
         "QuestionBank", back_populates="created_by_user"
-    )
-    audit_logs = relationship(
-        "AuditLog", back_populates="user", cascade="all, delete-orphan"
     )
 
     # ------------------------------------------------------------------ #
