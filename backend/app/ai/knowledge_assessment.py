@@ -9,7 +9,6 @@ proficiency level label.
 from __future__ import annotations
 
 import logging
-import random
 from typing import Any, Dict, List, Tuple
 
 logger = logging.getLogger(__name__)
@@ -76,7 +75,7 @@ async def get_questions(
         A list of question dicts (without the correct answer).
     """
     from sqlalchemy import select, func
-    from app.models.admin import QuestionBank, Difficulty
+    from app.models.admin import QuestionBank
 
     diff_enum = difficulty.lower()
 

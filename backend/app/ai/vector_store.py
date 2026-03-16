@@ -12,7 +12,7 @@ Collections used:
 from __future__ import annotations
 
 import logging
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, List
 
 logger = logging.getLogger(__name__)
 
@@ -46,7 +46,6 @@ def _embed_skills(skills: List[str]) -> List[float]:
     """Return a single embedding vector for a list of skills."""
     from sentence_transformers import SentenceTransformer  # type: ignore[import-untyped]
     from app.config import settings
-    import numpy as np
 
     model = SentenceTransformer(settings.SENTENCE_TRANSFORMER_MODEL)
     # Embed skills as a single joined text; use an empty-skill placeholder so
