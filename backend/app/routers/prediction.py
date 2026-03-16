@@ -17,11 +17,8 @@ from app.models.prediction import CareerPrediction, PlacementPrediction
 from app.models.user import User
 from app.schemas.prediction import (
     CareerPredictRequest,
-    CareerPredictResponse,
     PlacementPredictRequest,
-    PlacementPredictResponse,
     SimulateRequest,
-    SimulateResponse,
 )
 from app.utils.jwt_handler import get_current_user
 from app.utils.response import success_response

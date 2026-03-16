@@ -18,9 +18,8 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from app.database import get_db
 from app.models.profile import MentorProfile
 from app.models.roadmap import MentorshipSession, SessionStatus
-from app.models.user import User, UserRole
+from app.models.user import User
 from app.utils.jwt_handler import get_current_user
-from app.utils.rbac import require_role
 from app.utils.response import success_response
 
 router = APIRouter(prefix="/mentor", tags=["mentorship"])

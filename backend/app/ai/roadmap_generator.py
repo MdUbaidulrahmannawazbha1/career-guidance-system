@@ -10,7 +10,7 @@ from __future__ import annotations
 
 import math
 import logging
-from datetime import date, timedelta
+from datetime import date
 from typing import Any, Dict, List, Optional
 
 logger = logging.getLogger(__name__)
@@ -173,7 +173,7 @@ def generate_roadmap(
         hours_per_week = 10  # sensible default
 
     total_weeks = _weeks_available(hours_per_week, target_date)
-    total_hours = total_weeks * hours_per_week
+    _ = total_weeks * hours_per_week  # total_hours reserved for future use
 
     # Assign approximate hours per skill
     hours_per_skill = max(DEFAULT_HOURS_PER_SKILL, hours_per_week // 2)
