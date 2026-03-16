@@ -27,6 +27,21 @@ if not _SECRET_KEY:
         "SECRET_KEY environment variable is not set. "
         "Set a strong random value before starting the application."
     )
+"""
+User ORM model.
+
+Defines the ``User`` table and the ``UserRole`` enumeration used throughout
+the application for authentication and role-based access control.
+"""
+
+import enum
+import uuid
+
+from sqlalchemy import Boolean, Column, DateTime, Enum, Index, String, func
+from sqlalchemy.dialects.postgresql import UUID
+from sqlalchemy.orm import relationship
+
+from app.database import Base
 
 
 class UserRole(str, enum.Enum):
@@ -56,6 +71,9 @@ class User(Base):
         EncryptedType(String, _SECRET_KEY, AesEngine, "pkcs5"),
         nullable=True,
     )
+    email = Column(String(255), nullable=False, unique=True, index=True)
+    hashed_password = Column(String(255), nullable=False)
+    full_name = Column(String(255), nullable=True)
     role = Column(
         Enum(UserRole, name="userrole", create_type=True),
         nullable=False,
@@ -125,6 +143,9 @@ class User(Base):
     )
     created_questions = relationship(
         "QuestionBank", back_populates="created_by_user"
+    )
+    audit_logs = relationship(
+        "AuditLog", back_populates="user", cascade="all, delete-orphan"
     )
 
     # ------------------------------------------------------------------ #
