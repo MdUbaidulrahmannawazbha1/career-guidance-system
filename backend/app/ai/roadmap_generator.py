@@ -173,7 +173,7 @@ def generate_roadmap(
         hours_per_week = 10  # sensible default
 
     total_weeks = _weeks_available(hours_per_week, target_date)
-    _ = total_weeks * hours_per_week  # total_hours reserved for future use
+    total_hours = total_weeks * hours_per_week  # noqa: F841
 
     # Assign approximate hours per skill
     hours_per_skill = max(DEFAULT_HOURS_PER_SKILL, hours_per_week // 2)
