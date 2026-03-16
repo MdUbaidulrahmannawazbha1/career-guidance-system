@@ -43,6 +43,8 @@ class Settings(BaseSettings):
     # Database – PostgreSQL
     # ------------------------------------------------------------------
     DATABASE_URL: str = "postgresql+asyncpg://postgres:password@localhost:5432/career_guidance_db"
+    # Individual parameters are retained for tooling (e.g. psql, Alembic env).
+    # DATABASE_URL takes precedence for the SQLAlchemy engine.
     DATABASE_HOST: str = "localhost"
     DATABASE_PORT: int = 5432
     DATABASE_NAME: str = "career_guidance_db"
@@ -70,6 +72,8 @@ class Settings(BaseSettings):
     # Encryption (Fernet: AES-128-CBC + HMAC-SHA256)
     # ENCRYPTION_KEY must be a 32-byte hex-encoded string (64 hex chars).
     # The raw bytes are base64url-encoded to form the Fernet key.
+    # Encryption (AES-256)
+    # ENCRYPTION_KEY must be a 32-byte hex-encoded string (64 hex chars).
     # ENCRYPTION_IV  must be a 16-byte hex-encoded string (32 hex chars).
     # ------------------------------------------------------------------
     ENCRYPTION_KEY: str = Field(..., min_length=64, max_length=64)
@@ -84,6 +88,7 @@ class Settings(BaseSettings):
             raise ValueError("ENCRYPTION_KEY must be a valid 64-character hex string (32 bytes)") from exc
         if len(decoded) != 32:
             raise ValueError("ENCRYPTION_KEY must decode to exactly 32 bytes for Fernet encryption")
+            raise ValueError("ENCRYPTION_KEY must decode to exactly 32 bytes for AES-256")
         return v
 
     @field_validator("ENCRYPTION_IV", mode="after")

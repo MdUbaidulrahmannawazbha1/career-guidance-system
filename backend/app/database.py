@@ -37,6 +37,8 @@ engine: AsyncEngine = create_async_engine(
     max_overflow=settings.DATABASE_MAX_OVERFLOW,
     pool_pre_ping=True,
     pool_recycle=1800,
+    pool_pre_ping=True,         # verify connections before use
+    pool_recycle=1800,          # recycle connections every 30 minutes
     future=True,
 )
 
@@ -77,6 +79,10 @@ async def get_db() -> AsyncGenerator[AsyncSession, None]:
     Transaction management (commit / rollback) is the responsibility of the
     caller (service layer or route handler) so that business-logic boundaries
     determine when data is persisted.
+
+    This function is designed to be used as a FastAPI dependency::
+
+        db: AsyncSession = Depends(get_db)
     """
     async with AsyncSessionLocal() as session:
         try:
@@ -98,6 +104,8 @@ async def init_db() -> None:
     Create all tables defined in ORM models.
 
     In production, Alembic migrations should be used instead.
+    In production, Alembic migrations should be used instead.  This helper
+    is primarily useful during development and testing.
     """
     async with engine.begin() as conn:
         await conn.run_sync(Base.metadata.create_all)
@@ -115,6 +123,11 @@ async def close_db() -> None:
 
 async def check_db_connection() -> bool:
     """Return *True* if the database is reachable, *False* otherwise."""
+    """
+    Return *True* if the database is reachable, *False* otherwise.
+
+    Useful for liveness / readiness probe endpoints.
+    """
     try:
         async with engine.connect() as conn:
             await conn.execute(text("SELECT 1"))
