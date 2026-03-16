@@ -1,3 +1,8 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
 # Python
 __pycache__/
 *.py[cod]
@@ -10,11 +15,23 @@ __pycache__/
 venv/
 env/
 
+# Distribution / build
 # Distribution / packaging
 dist/
 build/
 *.egg-info/
 
+# Environment files
+.env
+.env.*
+
+# IDE
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
 # Testing
 .pytest_cache/
 .coverage
