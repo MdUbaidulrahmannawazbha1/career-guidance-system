@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Career Guidance System – Discover your ideal career path through a personalised quiz and explore in-depth career profiles." />
+  <title>Career Guidance System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===== Header ===== -->
+  <header>
+    <div class="container">
+      <div class="logo">🧭</div>
+      <h1>Career Guidance System</h1>
+      <p>Discover your ideal career path with a personalised assessment</p>
+    </div>
+  </header>
+
+  <!-- ===== Navigation ===== -->
+  <nav>
+    <div class="container">
+      <ul>
+        <li><a href="#" data-target="home" class="active">Home</a></li>
+        <li><a href="#" data-target="quiz">Take Quiz</a></li>
+        <li><a href="#" data-target="careers">Browse Careers</a></li>
+        <li><a href="#" data-target="about">About</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== Home Section ===== -->
+  <section data-section="home" class="active">
+    <div class="container">
+      <div class="hero">
+        <h2>Find the Career That's Right for You</h2>
+        <p>
+          Answer a few short questions and our system will match you with the best-fit
+          career paths based on your interests, strengths, and preferences.
+        </p>
+        <button class="btn btn-primary" id="start-quiz-btn">🚀 Start the Quiz</button>
+        &nbsp;
+        <button class="btn btn-outline" data-nav="careers">Browse Careers</button>
+      </div>
+
+      <div class="features">
+        <div class="feature-card">
+          <div class="icon">🎯</div>
+          <h3>Personalised Matching</h3>
+          <p>Our quiz analyses your answers to recommend the best career options uniquely suited to you.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">📊</div>
+          <h3>In-Depth Profiles</h3>
+          <p>Explore salary ranges, job growth, required skills, and education for each career.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">📚</div>
+          <h3>Learning Resources</h3>
+          <p>Get curated links to courses, certifications, and communities to kickstart your journey.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">🔍</div>
+          <h3>Browse &amp; Filter</h3>
+          <p>Search and filter careers by category to explore all available options at your own pace.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Quiz Section ===== -->
+  <section data-section="quiz">
+    <div class="container">
+      <div id="quiz-container"></div>
+    </div>
+  </section>
+
+  <!-- ===== Results Section ===== -->
+  <section data-section="results">
+    <div class="container">
+      <div id="results-container"></div>
+    </div>
+  </section>
+
+  <!-- ===== Browse Careers Section ===== -->
+  <section data-section="careers">
+    <div class="container">
+      <h2 style="font-size:1.6rem;font-weight:700;margin-bottom:1.5rem">Browse All Careers</h2>
+
+      <div class="search-filter">
+        <input
+          type="search"
+          id="career-search"
+          placeholder="Search by title, skill, or keyword…"
+          aria-label="Search careers"
+        />
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="technology">Technology</button>
+          <button class="filter-btn" data-filter="analytical">Analytical</button>
+          <button class="filter-btn" data-filter="creative">Creative</button>
+          <button class="filter-btn" data-filter="social">Social</button>
+        </div>
+      </div>
+
+      <div class="careers-grid" id="careers-grid"></div>
+    </div>
+  </section>
+
+  <!-- ===== About Section ===== -->
+  <section data-section="about">
+    <div class="container">
+      <div class="about-content" style="max-width:680px">
+        <h2>About This Project</h2>
+        <p>
+          The <strong>Career Guidance System</strong> is a web-based tool that helps students and
+          professionals explore career options that align with their interests, skills, and
+          aspirations. It is built entirely with HTML, CSS, and vanilla JavaScript — no backend or
+          framework required.
+        </p>
+        <p>
+          The quiz uses a simple category-scoring algorithm: each answer maps to one or more career
+          categories (Technology, Analytical, Creative, Social). After all questions are answered,
+          each career is scored based on how closely its categories match those chosen in your answers.
+          The top three matches are displayed as your personalised recommendations.
+        </p>
+        <h3 style="margin:1.5rem 0 0.75rem;font-size:1.1rem">Features</h3>
+        <ul>
+          <li>6-question personalised career assessment quiz</li>
+          <li>8 career profiles with salary, growth, skills &amp; resources</li>
+          <li>Match scoring visualised as a percentage bar</li>
+          <li>Searchable and filterable careers browser</li>
+          <li>Detailed career modal with curated learning links</li>
+          <li>Fully responsive design for desktop and mobile</li>
+        </ul>
+        <h3 style="margin:1.5rem 0 0.75rem;font-size:1.1rem">Tech Stack</h3>
+        <ul>
+          <li>HTML5 &amp; Semantic markup</li>
+          <li>CSS3 (custom properties, grid, flexbox, animations)</li>
+          <li>Vanilla JavaScript (ES6+, Fetch API)</li>
+          <li>JSON data store (no database needed)</li>
+        </ul>
+        <div class="mt-3">
+          <a class="btn btn-primary" href="https://github.com/MdUbaidulrahmannawazbha1/career-guidance-system" target="_blank" rel="noopener noreferrer">
+            ⭐ View on GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Career Detail Modal ===== -->
+  <div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal">
+      <button class="modal-close" id="modal-close-btn" aria-label="Close modal">✕</button>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <div class="container">
+      <p>© 2024 Career Guidance System · Built with ❤️ using HTML, CSS &amp; JavaScript</p>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

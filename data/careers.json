@@ -1,0 +1,186 @@
+{
+  "careers": [
+    {
+      "id": "software-engineer",
+      "title": "Software Engineer",
+      "description": "Design, develop, and maintain software applications and systems. Work with programming languages, frameworks, and tools to solve technical problems.",
+      "skills": ["Problem Solving", "Programming", "Mathematics", "Logical Thinking", "Teamwork"],
+      "education": "Bachelor's degree in Computer Science, Software Engineering, or related field",
+      "salaryRange": "$80,000 – $160,000",
+      "jobGrowth": "25% (Much faster than average)",
+      "categories": ["technology", "analytical"],
+      "resources": [
+        { "name": "freeCodeCamp", "url": "https://www.freecodecamp.org" },
+        { "name": "The Odin Project", "url": "https://www.theodinproject.com" },
+        { "name": "CS50 by Harvard", "url": "https://cs50.harvard.edu" }
+      ]
+    },
+    {
+      "id": "data-scientist",
+      "title": "Data Scientist",
+      "description": "Analyze and interpret complex data to help organizations make better decisions. Use statistical methods, machine learning, and data visualization techniques.",
+      "skills": ["Statistics", "Programming", "Mathematics", "Critical Thinking", "Communication"],
+      "education": "Bachelor's or Master's degree in Data Science, Statistics, or Computer Science",
+      "salaryRange": "$90,000 – $170,000",
+      "jobGrowth": "36% (Much faster than average)",
+      "categories": ["technology", "analytical"],
+      "resources": [
+        { "name": "Kaggle", "url": "https://www.kaggle.com" },
+        { "name": "Coursera Data Science", "url": "https://www.coursera.org/browse/data-science" },
+        { "name": "fast.ai", "url": "https://www.fast.ai" }
+      ]
+    },
+    {
+      "id": "ux-designer",
+      "title": "UX/UI Designer",
+      "description": "Create user-friendly and visually appealing digital products. Research user needs, design wireframes, prototypes, and collaborate with developers.",
+      "skills": ["Creativity", "Empathy", "Communication", "Visual Design", "Problem Solving"],
+      "education": "Bachelor's degree in Design, Human-Computer Interaction, or related field",
+      "salaryRange": "$65,000 – $130,000",
+      "jobGrowth": "16% (Faster than average)",
+      "categories": ["creative", "social"],
+      "resources": [
+        { "name": "Google UX Design Certificate", "url": "https://grow.google/certificates/ux-design/" },
+        { "name": "Figma Community", "url": "https://www.figma.com/community" },
+        { "name": "Nielsen Norman Group", "url": "https://www.nngroup.com" }
+      ]
+    },
+    {
+      "id": "doctor",
+      "title": "Medical Doctor",
+      "description": "Diagnose and treat illnesses, injuries, and medical conditions. Provide preventive care and guide patients toward healthier lifestyles.",
+      "skills": ["Science", "Empathy", "Critical Thinking", "Communication", "Attention to Detail"],
+      "education": "MBBS / MD degree followed by specialization (residency & fellowship)",
+      "salaryRange": "$130,000 – $300,000+",
+      "jobGrowth": "13% (Faster than average)",
+      "categories": ["social", "analytical"],
+      "resources": [
+        { "name": "Khan Academy MCAT Prep", "url": "https://www.khanacademy.org/test-prep/mcat" },
+        { "name": "AAMC", "url": "https://www.aamc.org" },
+        { "name": "Osmosis", "url": "https://www.osmosis.org" }
+      ]
+    },
+    {
+      "id": "teacher",
+      "title": "Teacher / Educator",
+      "description": "Educate students in a subject area, develop curriculum, and create a positive learning environment. Can specialize in primary, secondary, or higher education.",
+      "skills": ["Communication", "Patience", "Leadership", "Creativity", "Subject Expertise"],
+      "education": "Bachelor's degree in Education or a subject area + teaching certification",
+      "salaryRange": "$40,000 – $80,000",
+      "jobGrowth": "5% (About as fast as average)",
+      "categories": ["social", "creative"],
+      "resources": [
+        { "name": "Teachers Pay Teachers", "url": "https://www.teacherspayteachers.com" },
+        { "name": "Edutopia", "url": "https://www.edutopia.org" },
+        { "name": "Coursera Teaching", "url": "https://www.coursera.org/browse/education" }
+      ]
+    },
+    {
+      "id": "business-analyst",
+      "title": "Business Analyst",
+      "description": "Bridge the gap between business needs and technology solutions. Analyze processes, gather requirements, and recommend improvements.",
+      "skills": ["Analytical Thinking", "Communication", "Problem Solving", "Data Analysis", "Documentation"],
+      "education": "Bachelor's degree in Business Administration, Finance, or Computer Science",
+      "salaryRange": "$60,000 – $120,000",
+      "jobGrowth": "14% (Faster than average)",
+      "categories": ["analytical", "social"],
+      "resources": [
+        { "name": "IIBA", "url": "https://www.iiba.org" },
+        { "name": "Udemy BA Courses", "url": "https://www.udemy.com/topic/business-analysis/" },
+        { "name": "BA Times", "url": "https://www.batimes.com" }
+      ]
+    },
+    {
+      "id": "graphic-designer",
+      "title": "Graphic Designer",
+      "description": "Create visual content including logos, advertisements, branding materials, and digital graphics. Communicate ideas through typography, imagery, and color.",
+      "skills": ["Creativity", "Visual Communication", "Attention to Detail", "Software Proficiency", "Collaboration"],
+      "education": "Bachelor's degree in Graphic Design, Fine Arts, or related field",
+      "salaryRange": "$40,000 – $80,000",
+      "jobGrowth": "3% (Slower than average, but strong freelance opportunities)",
+      "categories": ["creative"],
+      "resources": [
+        { "name": "Adobe Creative Cloud Tutorials", "url": "https://helpx.adobe.com/creative-cloud/tutorials.html" },
+        { "name": "Canva Design School", "url": "https://www.canva.com/learn/design/" },
+        { "name": "Dribbble", "url": "https://dribbble.com" }
+      ]
+    },
+    {
+      "id": "cybersecurity-analyst",
+      "title": "Cybersecurity Analyst",
+      "description": "Protect computer systems and networks from cyber threats. Monitor for security breaches, investigate incidents, and implement security measures.",
+      "skills": ["Problem Solving", "Attention to Detail", "Networking", "Programming", "Critical Thinking"],
+      "education": "Bachelor's degree in Cybersecurity, Computer Science, or Information Technology",
+      "salaryRange": "$75,000 – $140,000",
+      "jobGrowth": "35% (Much faster than average)",
+      "categories": ["technology", "analytical"],
+      "resources": [
+        { "name": "Cybrary", "url": "https://www.cybrary.it" },
+        { "name": "TryHackMe", "url": "https://tryhackme.com" },
+        { "name": "CompTIA Security+", "url": "https://www.comptia.org/certifications/security" }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": 1,
+      "text": "Which subject do you enjoy the most?",
+      "options": [
+        { "label": "Mathematics & Logic", "categories": ["analytical", "technology"] },
+        { "label": "Science & Biology", "categories": ["analytical", "social"] },
+        { "label": "Arts & Literature", "categories": ["creative", "social"] },
+        { "label": "Computers & Technology", "categories": ["technology", "analytical"] }
+      ]
+    },
+    {
+      "id": 2,
+      "text": "How do you prefer to work?",
+      "options": [
+        { "label": "Alone, focusing deeply on a problem", "categories": ["analytical", "technology"] },
+        { "label": "With a small team on a project", "categories": ["technology", "creative"] },
+        { "label": "With many people, helping them directly", "categories": ["social"] },
+        { "label": "Freely and creatively with minimal structure", "categories": ["creative"] }
+      ]
+    },
+    {
+      "id": 3,
+      "text": "What kind of problems do you like solving?",
+      "options": [
+        { "label": "Technical and logical puzzles", "categories": ["technology", "analytical"] },
+        { "label": "Human and social challenges", "categories": ["social"] },
+        { "label": "Aesthetic and design challenges", "categories": ["creative"] },
+        { "label": "Data and pattern recognition", "categories": ["analytical"] }
+      ]
+    },
+    {
+      "id": 4,
+      "text": "What motivates you most in a career?",
+      "options": [
+        { "label": "High salary and financial growth", "categories": ["technology", "analytical"] },
+        { "label": "Making a positive impact on society", "categories": ["social"] },
+        { "label": "Creative freedom and expression", "categories": ["creative"] },
+        { "label": "Continuous learning and innovation", "categories": ["technology", "analytical", "creative"] }
+      ]
+    },
+    {
+      "id": 5,
+      "text": "How comfortable are you with technology?",
+      "options": [
+        { "label": "Very comfortable – I love building or using tech", "categories": ["technology"] },
+        { "label": "Comfortable – I use it as a tool", "categories": ["analytical", "social"] },
+        { "label": "Neutral – I use it when needed", "categories": ["social", "creative"] },
+        { "label": "Prefer non-tech approaches", "categories": ["creative", "social"] }
+      ]
+    },
+    {
+      "id": 6,
+      "text": "Which activity sounds most appealing to you?",
+      "options": [
+        { "label": "Writing and running code", "categories": ["technology"] },
+        { "label": "Teaching and mentoring others", "categories": ["social"] },
+        { "label": "Designing visual experiences", "categories": ["creative"] },
+        { "label": "Analyzing data to find insights", "categories": ["analytical"] }
+      ]
+    }
+  ]
+}
