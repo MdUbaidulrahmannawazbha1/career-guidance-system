@@ -1,7 +1,8 @@
 import { useMemo, useState } from 'react'
 import { Navigate, useLocation, useNavigate } from 'react-router-dom'
 import api from '../../services/api'
-import { roleDashboardPath, useAuth } from '../../context/AuthContext'
+import { roleDashboardPath } from '../../context/authConfig'
+import { useAuth } from '../../context/useAuth'
 
 const demoUserByEmail = {
   'student@example.com': { role: 'student', user_id: 101, full_name: 'Student User' },

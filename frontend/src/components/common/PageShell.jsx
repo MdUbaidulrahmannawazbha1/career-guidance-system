@@ -1,6 +1,7 @@
 import { LogOut } from 'lucide-react'
 import { Link } from 'react-router-dom'
-import { roleDashboardPath, useAuth } from '../../context/AuthContext'
+import { roleDashboardPath } from '../../context/authConfig'
+import { useAuth } from '../../context/useAuth'
 
 export default function PageShell({ title, children, actions }) {
   const auth = useAuth()

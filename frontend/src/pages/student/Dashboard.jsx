@@ -10,7 +10,7 @@ import {
 import { Link } from 'react-router-dom'
 import Chatbot from '../../components/student/Chatbot'
 import PageShell from '../../components/common/PageShell'
-import { useAuth } from '../../context/AuthContext'
+import { useAuth } from '../../context/useAuth'
 
 const stats = [
   { label: 'Assessments done', value: '5 / 7' },

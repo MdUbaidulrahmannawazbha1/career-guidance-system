@@ -1,7 +1,6 @@
-import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import { AuthContext } from './authContextInstance'
 import api, { setAuthTokenGetter, setUnauthorizedHandler } from '../services/api'
-
-const AuthContext = createContext(null)
 
 const getExpiryFromToken = (token) => {
   if (!token) {
@@ -16,12 +15,6 @@ const getExpiryFromToken = (token) => {
   }
 }
 
-export const roleDashboardPath = {
-  student: '/student/dashboard',
-  counsellor: '/counsellor/dashboard',
-  mentor: '/mentor/dashboard',
-  admin: '/admin/dashboard',
-}
 
 export function AuthProvider({ children }) {
   const [authState, setAuthState] = useState({
@@ -123,14 +116,4 @@ export function AuthProvider({ children }) {
   )
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>
-}
-
-export function useAuth() {
-  const context = useContext(AuthContext)
-
-  if (!context) {
-    throw new Error('useAuth must be used inside AuthProvider')
-  }
-
-  return context
 }

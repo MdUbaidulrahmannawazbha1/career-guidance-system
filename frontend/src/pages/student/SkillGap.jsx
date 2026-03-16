@@ -3,6 +3,7 @@ import {
   Bar,
   BarChart,
   CartesianGrid,
+  Cell,
   LabelList,
   ResponsiveContainer,
   XAxis,
@@ -68,7 +69,7 @@ export default function SkillGap() {
               <Bar dataKey="value" radius={[8, 8, 8, 8]}>
                 <LabelList dataKey="have" formatter={(value) => (value ? 'Have' : 'Missing')} position="right" />
                 {data.map((entry) => (
-                  <Bar dataKey="value" fill={entry.have ? '#16a34a' : '#dc2626'} key={entry.skill} />
+                  <Cell fill={entry.have ? '#16a34a' : '#dc2626'} key={entry.skill} />
                 ))}
               </Bar>
             </BarChart>

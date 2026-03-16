@@ -1,6 +1,7 @@
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import ProtectedRoute from './components/common/ProtectedRoute'
-import { roleDashboardPath, useAuth } from './context/AuthContext'
+import { roleDashboardPath } from './context/authConfig'
+import { useAuth } from './context/useAuth'
 import Login from './pages/auth/Login'
 import AdminDashboard from './pages/admin/Dashboard'
 import UserManagement from './pages/admin/UserManagement'
